@@ -1,0 +1,33 @@
+{
+    "name": "ephpm/cache-cakephp",
+    "description": "CakePHP 5 cache engine backed by ePHPm's built-in in-process KV store (native ephpm_kv_* functions) — no phpredis, no socket.",
+    "type": "library",
+    "keywords": ["cakephp", "cache", "ephpm", "kv", "psr-16"],
+    "homepage": "https://github.com/ephpm/cache-cakephp",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2",
+        "cakephp/cache": "^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5 || ^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ephpm\\Cache\\Cake\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ephpm\\Cache\\Cake\\Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
